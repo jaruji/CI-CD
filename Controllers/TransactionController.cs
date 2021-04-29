@@ -28,7 +28,7 @@ namespace InternetBanking {
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(decimal id)
+        public IActionResult Get(decimal id, int user_id)
         {
             var transaction = _transactionService.GetTransaction(id);
             if(transaction == null){
